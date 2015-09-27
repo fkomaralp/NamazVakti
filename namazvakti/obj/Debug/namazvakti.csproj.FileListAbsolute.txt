@@ -1,0 +1,11 @@
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\bin\Debug\namazvakti.exe.config
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\bin\Debug\namazvakti.exe
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\obj\Debug\namazvakti.Form1.resources
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\obj\Debug\namazvakti.Properties.Resources.resources
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\obj\Debug\namazvakti.csproj.GenerateResource.Cache
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\obj\Debug\namazvakti.exe
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\obj\Debug\namazvakti.pdb
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\bin\Debug\namazvakti.pdb
+C:\Users\Kunduz\Documents\Visual Studio 2013\Projects\namazvakti\namazvakti\obj\Debug\namazvakti.csprojResolveAssemblyReference.cache
