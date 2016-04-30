@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,19 +50,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.yatsi = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
@@ -69,6 +69,17 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.label10 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -171,9 +182,9 @@
             "Kilis",
             "Osmaniye",
             "Düzce"});
-            this.comboBox1.Location = new System.Drawing.Point(259, 3);
+            this.comboBox1.Location = new System.Drawing.Point(348, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(343, 39);
+            this.comboBox1.Size = new System.Drawing.Size(254, 39);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.Update);
             // 
@@ -319,10 +330,12 @@
             // timer1
             // 
             this.timer1.Interval = 300000;
+            this.timer1.Tag = "Şehir Dinleyici";
             this.timer1.Tick += new System.EventHandler(this.tick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.imsak);
             this.groupBox1.Location = new System.Drawing.Point(6, 48);
@@ -333,6 +346,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.gunes);
             this.groupBox2.Location = new System.Drawing.Point(92, 48);
@@ -343,16 +357,28 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.ogle);
+            this.groupBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox3.Location = new System.Drawing.Point(178, 48);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(80, 100);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(0, 87);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 12);
+            this.label9.TabIndex = 9;
+            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.ikindi);
             this.groupBox4.Location = new System.Drawing.Point(264, 48);
@@ -363,6 +389,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label14);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Controls.Add(this.aksam);
@@ -384,6 +411,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Controls.Add(this.label7);
             this.groupBox7.Controls.Add(this.kible);
             this.groupBox7.Location = new System.Drawing.Point(522, 48);
@@ -406,11 +434,13 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.groupBox8);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox3);
@@ -426,8 +456,29 @@
             this.tabPage1.Text = "Namaz Vakitleri";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label16.Location = new System.Drawing.Point(148, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 20);
+            this.label16.TabIndex = 18;
+            this.label16.Text = "00:00:00";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label15.Location = new System.Drawing.Point(36, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 20);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "00.00.0000";
+            // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.label20);
             this.groupBox8.Controls.Add(this.label8);
             this.groupBox8.Controls.Add(this.yatsi);
             this.groupBox8.Location = new System.Drawing.Point(436, 48);
@@ -456,46 +507,6 @@
             this.yatsi.TabIndex = 8;
             this.yatsi.Text = "label8";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Image = global::namazvakti.Properties.Resources.calendar_3d3d3d_15;
-            this.label19.Location = new System.Drawing.Point(8, 3);
-            this.label19.MinimumSize = new System.Drawing.Size(40, 40);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(40, 40);
-            this.label19.TabIndex = 20;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Image = global::namazvakti.Properties.Resources.clock_o_3d3d3d_15;
-            this.label17.Location = new System.Drawing.Point(141, 3);
-            this.label17.MinimumSize = new System.Drawing.Size(40, 40);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 40);
-            this.label17.TabIndex = 19;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label16.Location = new System.Drawing.Point(178, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(51, 20);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "label8";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label15.Location = new System.Drawing.Point(45, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 20);
-            this.label15.TabIndex = 8;
-            this.label15.Text = "label21";
-            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -508,6 +519,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.checkBox2);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.checkBox1);
             this.tabPage3.Controls.Add(this.numericUpDown1);
@@ -516,7 +528,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(608, 156);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Alarm";
+            this.tabPage3.Text = "Ayarlar";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label18
@@ -571,7 +583,107 @@
             // 
             this.timer5.Enabled = true;
             this.timer5.Interval = 60000;
+            this.timer5.Tag = "Alarm Dinleyici";
             this.timer5.Tick += new System.EventHandler(this.AlarmTimer);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.Location = new System.Drawing.Point(225, 3);
+            this.label10.MinimumSize = new System.Drawing.Size(40, 40);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(40, 40);
+            this.label10.TabIndex = 21;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Image = global::namazvakti.Properties.Resources.calendar_3d3d3d_15;
+            this.label19.Location = new System.Drawing.Point(3, 3);
+            this.label19.MinimumSize = new System.Drawing.Size(40, 40);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(40, 40);
+            this.label19.TabIndex = 20;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Image = global::namazvakti.Properties.Resources.clock_o_3d3d3d_15;
+            this.label17.Location = new System.Drawing.Point(119, 3);
+            this.label17.MinimumSize = new System.Drawing.Size(40, 40);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 40);
+            this.label17.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label11.Location = new System.Drawing.Point(271, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 20);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "00:00:00";
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Location = new System.Drawing.Point(0, 87);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 12);
+            this.label12.TabIndex = 9;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Location = new System.Drawing.Point(0, 87);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(80, 12);
+            this.label14.TabIndex = 9;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Location = new System.Drawing.Point(0, 87);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(80, 12);
+            this.label20.TabIndex = 9;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Location = new System.Drawing.Point(0, 87);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(80, 12);
+            this.label21.TabIndex = 9;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Location = new System.Drawing.Point(0, 87);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(80, 12);
+            this.label22.TabIndex = 9;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Location = new System.Drawing.Point(0, 87);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(80, 12);
+            this.label23.TabIndex = 9;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(17, 46);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(67, 17);
+            this.checkBox2.TabIndex = 18;
+            this.checkBox2.Text = "Önde tut";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.ToFront);
             // 
             // Form1
             // 
@@ -651,6 +763,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label yatsi;
         private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

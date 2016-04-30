@@ -91,7 +91,7 @@ namespace namazvakti
             //{
             //    nv = GetNamazVakitleri(ConvertTurkishChars(comboBox1.Text));
             //}
-
+             
             int min = Convert.ToInt32(numericUpDown1.Value);
 
             if (Convert.ToDateTime(aksam.Text).AddMinutes(-min) >= DateTime.Now
@@ -121,10 +121,60 @@ namespace namazvakti
 
         }
 
+
+        //Saat
         bool clock = false;
         private void tickclock(object sender, EventArgs e)
         {
+
+            //Saat güncelle
             label16.Text = DateTime.Now.ToString("HH:mm:ss");
+
+            //string[] clocks = new string[] { imsak.Text, ogle.Text, ikindi.Text, aksam.Text, yatsi.Text };
+
+            var clocks = new Dictionary<Label, string>();
+
+            clocks.Add(label23, imsak.Text);
+            clocks.Add(label9, ogle.Text);
+            clocks.Add(label12, ikindi.Text);
+            clocks.Add(label14, aksam.Text);
+            clocks.Add(label20, yatsi.Text);
+
+            var next = new List<string>();
+            var early = new Dictionary<string, Label>();
+
+            foreach (var item in clocks)
+	        {
+
+		        TimeSpan duration = DateTime.Parse(item.Value).Subtract(DateTime.Parse(label16.Text));
+                if (duration.TotalHours > 0)
+                {
+                    next.Add(duration.ToString());
+                    label11.Text = next[0].ToString();
+
+                    //item.Key.BackColor = Color.Teal;
+                }
+                else
+                {
+                    early.Add(duration.ToString(), item.Key); 
+                }
+
+                
+
+	        }
+
+            early.Last().Value.BackColor = Color.Teal;
+
+        }
+
+        private void ToFront(object sender, EventArgs e)
+        {
+            this.TopMost = false;
+
+            if (checkBox2.Checked)
+            {
+                this.TopMost = true;
+            }
         }
     } 
 
